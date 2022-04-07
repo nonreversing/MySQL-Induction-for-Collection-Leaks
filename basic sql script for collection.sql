@@ -13,7 +13,7 @@ LOAD DATA INFILE 'File_Path.txt' IGNORE
 INTO TABLE Table_Name
 FIELDS TERMINATED BY ':'
 LINES TERMINATED BY '\r\n'
-(email, password, @discard1, @discard2, @discard3) /* Fast and ugly way to ignore passwords that would break induction. */
+(email, password, @discard1, @discard2) /* Fast and ugly way to ignore passwords that would break induction. Use RipGrep to clean up files beforehand. See RG CleanUp BAT in repository. */
 /* Previous debug commands below. Do not use with IGNORE -- warning that dataset from 
 Collection 1-5 files may have formatting errors. */
 /*
